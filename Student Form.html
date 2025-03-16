@@ -56,7 +56,38 @@
     <h2>Submitted Forms:</h2>
    <div id="Stars"></div>
 
-    <script src="script.js"></script>
+    <script src="script.js">
+        document.getElementById('studentform').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const firstname = document.querySelector('input[name="firstname"]').value;
+    const lastname = document.querySelector('input[name="lastname"]').value;
+    const othername = document.querySelector('input[name="othername"]').value;
+    const gender = document.querySelector('input[name="sex"]:checked').value;
+    const dob = document.querySelector('input[name="date of birth"]').value;
+    const religion = document.querySelector('select[name="religion"]').value;
+    const status = document.querySelector('input[name="status"]:checked').value;
+    const program = document.querySelector('select[name="program"]').value;
+    const parentName = document.querySelector('input[name="parentname"]').value;
+    const contact = document.querySelector('input[name="contact"]').value;
+
+    const submission = document.createElement('div');
+    submission.innerHTML = `<p>First Name: ${firstname}</p>
+                            <p>Last Name: ${lastname}</p>
+                            <p>Other Name: ${othername}</p>
+                            <p>Gender: ${gender}</p>
+                            <p>Date of Birth: ${dob}</p>
+                            <p>Religion: ${religion}</p>
+                            <p>Residential Status: ${status}</p>
+                            <p>Program: ${program}</p>
+                            <p>Parent Name: ${parentName}</p>
+                            <p>Contact: ${contact}</p>`;
+
+    document.getElementById('Stars').appendChild(submission);
+
+    document.getElementById('studentform').reset();
+});
+    </script>
     <br><a href="Learn more.html">Previous</a> ||  <a href="index.html">Go to Home</a>
 </body>
 </html>
