@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CMSHS Website</title>
     <link rel="icon" type="image/x-icon" href="images/CMSHS.jpg">
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 </head>
 <body>
     <h1><i>Welcome to CMSHS website</i></h1>
@@ -20,5 +21,12 @@
     <h3>MOTTO: "NON SCHOLAE SED VITAE DISCIMUS"<br>Translated As;<br>"WE LEARN NOT FOR SCHOOL, BUT FOR LIFE"</h3>
     
     <h3>SLOGAN: "CHRIMESCO!"<br>RESPONSE: "JEE GIDIGIDI"</h3>
+    <!-- Dialogflow Messenger Code -->
+    <df-messenger
+        intent="WELCOME"
+        chat-title="CMSHS Chatbot"
+        agent-id="YOUR_AGENT_ID"
+        language-code="en">
+    </df-messenger>
 </body>
 </html>
