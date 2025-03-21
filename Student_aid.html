@@ -2,13 +2,25 @@
 <html>
 <head>
   <title>Student Aid</title>
-  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  
 </head>
 <body>
   <a href="Past_questions.html"><u>WASSCE Past Questions</u></a><br>
   <br><a href="Quiz.html"><u>Quizes</u></a><br>
 
-<iframe height="430" width="350" src="https://bot.dialogflow.com/568d8c57-732e-4274-810d-0ea105d711c8">CMSHS Chatbot</iframe>
+import OpenAI from "openai";
+const client = new OpenAI();
+
+const completion = await client.chat.completions.create({
+    model: "gpt-4o",
+    messages: [{
+        role: "user",
+        content: "Write a one-sentence bedtime story about a unicorn.",
+    }],
+});
+
+console.log(completion.choices[0].message.content);
+
   
 </body> 
 </html>
